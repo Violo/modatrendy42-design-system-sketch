@@ -1,4 +1,4 @@
-# Ius Maior
+# ModaTrendy42
 
 Just another design system sketch
 
@@ -6,6 +6,8 @@ Just another design system sketch
 
 
 ### Prerequisiti
+
+install [NVM](https://github.com/creationix/nvm)
 
 
 ```
