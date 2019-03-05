@@ -1,0 +1,117 @@
+//== Look
+//
+//##
+
+$button-bg-color:#aaa;
+$button-bg-color-hover:#444;
+$button-height:22px;
+%button_icon{
+    border-radius:4px;
+    border:none;
+    outline:none;
+    margin:0;
+    padding:0;
+    background-color:$button-bg-color;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    height:$button-height;
+    width:$button-height;
+    &:hover{
+        background-color:$button-bg-color-hover;
+    }
+    &[disabled]{
+        opacity:0.2;
+        cursor:not-allowed;
+    }
+    span{
+        display:none;
+    }
+}
+
+@mixin transition($valuetransition){
+    transition:$valuetransition;
+    -webkit-transition:$valuetransition;
+    -o-transition:$valuetransition;
+    -moz-transition:$valuetransition;
+}
+
+@mixin transition-delay($valuetransition-delay){
+    transition-delay: $valuetransition-delay;
+    -webkit-transition-delay: $valuetransition-delay;
+}
+
+@mixin transition-timing($valuetransition-timing){
+    transition-timing-function: $valuetransition-timing;
+    -webkit-transition-timing-function: $valuetransition-timing;
+    -moz-transition-timing-function:$valuetransition-timing;
+    -o-transition-timing-function:$valuetransition-timing;
+}
+
+@mixin transition-duration($valuetransition-duration){
+    transition-duration: $valuetransition-duration;
+    -webkit-transition-duration: $valuetransition-duration;
+    -moz-transition-duration:$valuetransition-duration;
+    -o-transition-duration:$valuetransition-duration;
+}
+
+@mixin transform-scale($valuetransform){
+    -ms-transform: scale($valuetransform);
+    -webkit-transform: scale($valuetransform);
+    -moz-transform: scale($valuetransform);
+    -o-transform: scale($valuetransform);
+    transform: scale($valuetransform);
+}
+
+$look-shadow-color:#aaa;
+$look-shadow-hover-color:#eee;
+$img-height:250px;
+
+.look_list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:flex-start;
+    &__item{
+        box-shadow:0px 0px 3px 0px $look-shadow-color;
+        flex:0 0 170px;
+        padding:22px 20px 10px 20px;
+        margin:0 10px 20px 10px;
+        &:hover{
+            background-color: $look-shadow-hover-color;
+            cursor:pointer;
+            @include transition (all);
+            @include transition-duration (0.2s);
+            @include transition-timing(ease-out);
+            @include transform-scale(1.03);
+        }
+        &__figure{
+            margin:0 auto 10px auto;
+            padding:0;
+            position:relative;
+            img{
+                max-width:100%;
+                max-height:$img-height;
+                display:block;
+                margin:0 auto;
+            }
+        }
+        &__details{
+            padding-left:0;
+            padding-right:0;
+            height:22px;
+            &__shoot_number{
+                position:relative;
+                top:2px;
+                left:4px;
+                color:#444444;
+            }
+            &__button_rename{
+                @extend %button_icon;
+                float:right;
+                //background-image:url('../src/modatrendy42Look/img/ico_edit_16_white.svg');
+            }
+        }
+    }
+}
