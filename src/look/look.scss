@@ -16,6 +16,7 @@ $button-height:22px;
     background-repeat:no-repeat;
     height:$button-height;
     width:$button-height;
+    cursor:pointer;
     &:hover{
         background-color:$button-bg-color-hover;
     }
@@ -110,7 +111,7 @@ $img-height:250px;
             &__button_rename{
                 @extend %button_icon;
                 float:right;
-                //background-image:url('../src/modatrendy42Look/img/ico_edit_16_white.svg');
+                background-image:url('./Look/ico_edit_16_white.svg');
             }
         }
     }
