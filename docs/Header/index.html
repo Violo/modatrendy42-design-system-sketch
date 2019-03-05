@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>ModaTrendy42 Design System</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <script src="./bundle.js"></script>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+
+        <h1>ModaTrendy42 Design System</h1>
+
+        <h2>Header</h2>
+        <p><code>&lt;header&gt;</code> è il blocco di intestazione di ogni vista. Fornisce il riferimento visivo
+        al brand e propone le azioni di servizio utili in ogni vista, ma non strettamente collegate al contenuto della vistastessa.</p>
+
+        <header class="header">
+            <img class="header__logo" src="logo.svg" alt="ModaTrendy42" />
+            <h1 class="header__collection-name">Sfilata primavera 2019</h1>
+            <button class="header__button-header header__button-header--logout" title="Logout"><span>Logout</span></button>
+            <button class="header__button-header header__button-header--backoffice" title="Backoffice"><span>Backoffice</span></button>
+        </header>
+
+        <h2>Snippet</h2>
+        <pre>
+&lt;header class=&quot;header&quot;&gt;
+    &lt;img class=&quot;header__logo&quot; src=&quot;&quot; alt=&quot;ModaTrendy42&quot; /&gt;
+    &lt;h1 class=&quot;header__collection-name&quot;&gt;Sfilata primavera 2019&lt;/h1&gt;
+    &lt;button class=&quot;header__button-header header__button-header--logout&quot; title=&quot;Logout&quot;&gt;&lt;span&gt;Logout&lt;/span&gt;&lt;/button&gt;
+    &lt;button class=&quot;header__button-header header__button-header--backoffice&quot; title=&quot;Backoffice&quot;&gt;&lt;span&gt;Backoffice&lt;/span&gt;&lt;/button&gt;
+&lt;/header&gt;
+        </pre>
+
+        <h2>Do &amp; Don't</h2>
+
+        <ul>
+            <li>✅ usare sempre come primo elemento della vista.</li>
+            <li>✅ nella parte a destra è contemplato uno spazio per servizi generici aggiuntivi</li>
+            <li>⚠️ non usarlo più di una volta.</li>
+        </ul>
+
+    </body>
+
+</html>
