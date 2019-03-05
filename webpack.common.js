@@ -21,12 +21,22 @@ module.exports = {
                         }
                     }
                 ]
+            },{
+                test: /\.(png|jpg|gif|svg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {},
+                    },
+                ],
             },
             {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    "css-loader",
+                    "css-loader", {
+                        loader: 'resolve-url-loader'
+                    },
                     "sass-loader"
                 ]
             }
